@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Workshops | Riverbend Yoga Studio</title>
+</head>
+<body>
+  <header>
+    <h1>Riverbend Yoga Studio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Monthly Workshops</h2>
+      <p>Deepen your practice and mindfulness with our specialized, monthly educational events.</p>
+      <!-- REQUIRED ELEMENT: Figure with Figcaption -->
+      <figure>
+        <img src="yoga-workshop.jpg" alt="A group of diverse workshop participants sitting in a comfortable circle on yoga bolsters, listening attentively.">
+        <figcaption>Participants learning therapeutic breathing and alignment techniques at our weekend wellness workshop.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Request a Spot</h2>
+      <!-- REQUIRED ELEMENT: Complete Form with Fieldset, Legend, and Validation -->
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Interest and Registration Form</legend>
+          
+          <p>
+            <label for="user-name">Full Name:</label>
+            <input type="text" id="user-name" name="userName" required placeholder="Jane Doe">
+          </p>
+          
+          <p>
+            <label for="user-email">Email Address:</label>
+            <input type="email" id="user-email" name="userEmail" required placeholder="jane@example.com">
+          </p>
+          
+          <p>
+            <label for="interest">Class or Event Interest:</label>
+            <select id="interest" name="eventInterest" required>
+              <option value="">--Please select an option--</option>
+              <option value="gentle">Gentle Yoga Class</option>
+              <option value="vinyasa">Vinyasa Flow Class</option>
+              <option value="restorative">Restorative Yoga Class</option>
+              <option value="workshop">Monthly Weekend Workshop</option>
+            </select>
+          </p>
+          
+          <p>
+            <label for="experience">Experience Level:</label>
+            <select id="experience" name="experienceLevel" required>
+              <option value="">--Please select an option--</option>
+              <option value="beginner">Beginner (No experience)</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </p>
+          
+          <p>
+            <label for="contact-method">Preferred Contact Method:</label>
+            <select id="contact-method" name="contactMethod" required>
+              <option value="email">Email</option>
+              <option value="phone">Phone Call</option>
+            </select>
+          </p>
+          
+          <p>
+            <label for="message">Message / Questions:</label>
+            <textarea id="message" name="userMessage" rows="4" cols="30" placeholder="Tell us about any accommodations you need..."></textarea>
+          </p>
+          
+          <button type="submit">Submit Request</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Riverbend Yoga Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -13,6 +13,10 @@
   --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -112,6 +116,7 @@ section {
   border-radius: 8px;
   border-left: 5px solid var(--accent-peach);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 120px;
 }
 
 h2, h3 {
@@ -149,6 +154,7 @@ img, video, picture {
 
 figure {
   margin: 1rem 0;
+  overflow: hidden;
 }
 
 figcaption {

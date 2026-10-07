@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Riverbend Yoga Studio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    figure {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+
+    figure:hover {
+      opacity: 0.8;
+    }
+
+    figure img {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -26,30 +40,32 @@
     <section>
       <h3>Gentle Hatha Yoga</h3>
       <p>A slow-paced, alignment-focused class ideal for beginners or those seeking restorative movement.</p>
-      <figure>
+      <figure class="clickable-class" data-class="gentle">
         <img src="yoga-feature-small_c.png" alt="Instructor guiding students in a gentle yoga pose">
-        <figcaption>Our gentle Hatha Yoga class in action.</figcaption>
+        <figcaption>Our gentle Hatha Yoga class in action. Click to request a spot!</figcaption>
       </figure>
     </section>
     <section>
       <h3>Vinyasa Flow</h3>
       <p>A dynamic class linking breath with continuous movement to build heat, strength, and stamina.</p>
-      <figure>
+      <figure class="clickable-class" data-class="vinyasa">
         <img src="yoga-feature-large_c.png" alt="Dynamic Vinyasa Flow class with flowing movements">
-        <figcaption>Experience the energy of our Vinyasa Flow classes.</figcaption>
+        <figcaption>Experience the energy of our Vinyasa Flow classes. Click to request a spot!</figcaption>
       </figure>
     </section>
     <section>
       <h3>Private Instruction</h3>
       <p>One-on-one sessions designed to address individual goals, modifications, or injury recovery.</p>
-      <figure>
+      <figure class="clickable-class" data-class="private">
         <img src="yoga-studio_c.png" alt="Private yoga instruction in a peaceful studio setting">
-        <figcaption>Personalized instruction tailored to your practice and goals.</figcaption>
+        <figcaption>Personalized instruction tailored to your practice and goals. Click to request a spot!</figcaption>
       </figure>
     </section>
   </main>
   <footer>
     <p>&copy; 2026 Riverbend Yoga Studio. All rights reserved.</p>
   </footer>
+
+  <script src="services.js"></script>
 </body>
 </html>

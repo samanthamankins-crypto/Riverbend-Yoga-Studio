@@ -12,7 +12,6 @@ const formValidationRules = {
 };
 
 const STORAGE_KEY = "riverbendYogaStudioFormData";
-const SUBMISSIONS_KEY = "riverbendYogaStudioSubmissions";
 
 function getStoredDraft() {
   try {
@@ -32,24 +31,11 @@ function saveDraft(formData) {
   }
 }
 
-function getSavedSubmissions() {
+function clearDraft() {
   try {
-    const saved = JSON.parse(localStorage.getItem(SUBMISSIONS_KEY) || "[]");
-    return Array.isArray(saved) ? saved : [];
+    localStorage.removeItem(STORAGE_KEY);
   } catch (error) {
-    console.warn("Unable to read saved submissions:", error);
-    return [];
-  }
-}
-
-function saveSubmission(submission) {
-  const submissions = getSavedSubmissions();
-  submissions.push(submission);
-
-  try {
-    localStorage.setItem(SUBMISSIONS_KEY, JSON.stringify(submissions));
-  } catch (error) {
-    console.warn("Unable to save submission:", error);
+    console.warn("Unable to clear form data:", error);
   }
 }
 
@@ -83,6 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const clearDraftBtn = document.getElementById("clear-draft-btn");
+  if (clearDraftBtn) {
+    clearDraftBtn.addEventListener("click", () => {
+      if (confirm("Are you sure you want to clear the saved form?")) {
+        clearDraft();
+        form.reset();
+        alert("Saved form data has been cleared.");
+      }
+    });
+  }
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -99,14 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const submission = {
-      ...formData,
-      submittedAt: new Date().toISOString()
-    };
-
-    saveSubmission(submission);
-    localStorage.removeItem(STORAGE_KEY);
+    clearDraft();
     form.reset();
-    alert("Your request has been saved locally.");
+    alert("Your request has been submitted.");
   });
 });

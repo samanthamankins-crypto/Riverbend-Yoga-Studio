@@ -84,15 +84,23 @@
             <textarea id="message" name="userMessage" rows="4" cols="30" placeholder="Tell us about any accommodations you need..."></textarea>
           </p>
 
-          <button type="submit">Submit Request</button>
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button type="submit">Submit Request</button>
+            <button type="button" id="clear-draft-btn">Clear Saved Form</button>
+          </div>
         </fieldset>
       </form>
+    </section>
+
+    <section>
+      <h2>Saved Submissions</h2>
+      <div id="submissions-list"></div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Riverbend Yoga Studio. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
